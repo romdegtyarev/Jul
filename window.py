@@ -202,7 +202,7 @@ class MainWindow(QWidget):
         self.setLayout(grid)
 
         #Начальная позиция и размер окна
-        self.setGeometry(300, 300, 600, 400)
+        self.setGeometry(300, 300, 700, 400)
         self.setWindowTitle('Автоматизация МАИ')
         #self.setWindowIcon(QIcon('1.png'))
 
@@ -622,10 +622,10 @@ class MainWindow(QWidget):
                 self.table2.item(i, 3).setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
 
         if self.level1EditValue > 4:
-        for i in range(1, self.table2.rowCount()):
-            item = str(round(float(self.nv2_5[i - 1]), 4))
-            self.table2.setItem(i, 4, QTableWidgetItem(item))
-            self.table2.item(i, 4).setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
+            for i in range(1, self.table2.rowCount()):
+                item = str(round(float(self.nv2_5[i - 1]), 4))
+                self.table2.setItem(i, 4, QTableWidgetItem(item))
+                self.table2.item(i, 4).setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
 
         temp = 0
         for i in range(0, self.level1EditValue):
